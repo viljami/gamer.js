@@ -1,3 +1,9 @@
 # Thoughts for future use
 
-JavaScript, HTML5, CSS3
+Tools:
+ * JavaScript,
+ * HTML5,
+ * CSS3
+
+Libs: 
+ * Require.js
