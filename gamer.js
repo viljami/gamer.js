@@ -3,8 +3,8 @@ var http = require('http');
 var port = 3000;
 
 var app = connect()
-    .use(connect.static('public'))
-    .use(connect.directory('public'))
+    .use(connect.static('projects'))
+    .use(connect.directory('projects'))
     .use(connect.cookieParser())
     .use(connect.session({ secret: 'Use the force, Luke.' }));
 
