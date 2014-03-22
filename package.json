@@ -1,0 +1,29 @@
+{
+    "name": "gamer.js",
+    "preferGlobal": false,
+    "version": "0.0.2",
+    "author": "Viljami <contact@viljamipeltola.com>",
+    "description": "Testing ground for game logic.",
+    "bin": {
+        "gamer": "./gamer.js"
+    },
+    "main": "./gamer.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/viljami/gamer.js.git"
+    },
+    "keywords": [
+        "HTML5",
+        "JavaScript",
+        "game"
+    ],
+    "dependencies": {
+        "requirejs": "*",
+        "connect": "2.14.x"
+    },
+    "analyze": false,
+    "license": "MIT",
+    "engines": {
+        "node": ">=0.6"
+    }
+}
