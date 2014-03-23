@@ -3,6 +3,7 @@ var http = require('http');
 var port = 3000;
 
 var app = connect()
+    .use(connect.static('node_modules/three'))
     .use(connect.static('projects'))
     .use(connect.directory('projects'))
     .use(connect.cookieParser())

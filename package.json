@@ -18,8 +18,10 @@
         "game"
     ],
     "dependencies": {
+        "connect": "2.14.x",
+        "lodash": "2.4.x",
         "requirejs": "*",
-        "connect": "2.14.x"
+        "three": "0.66.x"
     },
     "analyze": false,
     "license": "MIT",
