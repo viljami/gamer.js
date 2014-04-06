@@ -1,6 +1,7 @@
 ;(function(undefined){
     var canvas = document.getElementsByTagName('canvas')[0];
 
+
     // Sometimes window.innerWidth has delay...
     // This method has not.
     var dimensionsDiv = document.createElement('div');
@@ -15,10 +16,11 @@
 
     document.body.appendChild(dimensionsDiv);
 
+
     var resize = function(){
-        var dimenensions = dimensionsDiv.getBoundingClientRect();
-        canvas.width = dimenensions.width;
-        canvas.height = dimenensions.height;
+        window.size = dimensionsDiv.getBoundingClientRect();
+        canvas.width = window.size.width;
+        canvas.height = window.size.height;
     };
 
     window.onresize = resize;
