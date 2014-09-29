@@ -3,6 +3,7 @@ var http = require('http');
 var port = 3000;
 
 var app = connect()
+app.use('/vendor', connect.static(__dirname + '/node_modules/q'));
 app.use('/vendor', connect.static(__dirname + '/node_modules/bootstrap/dist'));
 app.use('/vendor', connect.static(__dirname + '/node_modules/backbone'));
 app.use('/vendor', connect.static(__dirname + '/node_modules/requirejs'));

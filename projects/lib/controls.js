@@ -46,7 +46,7 @@ define([
   return {
     init: function(){ keyboard.init(); },
     start: function(){ keyboard.startLinstening(); },
-    stop: function(){ keyboard.stopLinstening(); },
+    stop: function(){ keyboard.stopListening(); },
     isDown: function(n){ return keyboard.isDownFast(n); }
   };
 });

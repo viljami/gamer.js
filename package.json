@@ -1,37 +1,38 @@
 {
-    "name": "gamer.js",
-    "preferGlobal": false,
-    "version": "0.0.2",
-    "author": "Viljami <contact@viljamipeltola.com>",
-    "description": "Testing ground for game logic.",
-    "bin": {
-        "index": "./index.js"
-    },
-    "main": "./gamer.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/viljami/gamer.js.git"
-    },
-    "keywords": [
-        "HTML5",
-        "JavaScript",
-        "game"
-    ],
-    "dependencies": {
-        "connect": "2.14.x",
-        "lodash": "2.4.x",
-        "three": "0.66.x",
-	"backbone": "^1.1.2",
-    	"body-parser": "^1.6.7",
-    	"bootstrap": "^3.2.0",
-    	"express": "^4.8.7",
-    	"hogan.js": "^3.0.2",
-    	"jquery": "^2.1.1",
-    	"requirejs": "^2.1.14"
-    },
-    "analyze": false,
-    "license": "MIT",
-    "engines": {
-        "node": ">=0.6"
-    }
+  "name": "gamer.js",
+  "preferGlobal": false,
+  "version": "0.0.2",
+  "author": "Viljami <contact@viljamipeltola.com>",
+  "description": "Testing ground for game logic.",
+  "bin": {
+    "index": "./index.js"
+  },
+  "main": "./gamer.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viljami/gamer.js.git"
+  },
+  "keywords": [
+    "HTML5",
+    "JavaScript",
+    "game"
+  ],
+  "dependencies": {
+    "backbone": "^1.1.2",
+    "body-parser": "^1.6.7",
+    "bootstrap": "^3.2.0",
+    "connect": "2.14.x",
+    "express": "^4.8.7",
+    "hogan.js": "^3.0.2",
+    "jquery": "^2.1.1",
+    "lodash": "2.4.x",
+    "q": "^1.0.1",
+    "requirejs": "^2.1.14",
+    "three": "0.66.x"
+  },
+  "analyze": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
 }
