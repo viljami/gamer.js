@@ -1,12 +1,11 @@
+/*
+* some of the code is from: http://www.iforce2d.net/embox2d/testbed.html
+*/
 define(['Box2D'], function(Box2D) {
   var b2Vec2 = Box2D.b2Vec2;
   var b2PolygonShape = Box2D.b2PolygonShape;
   var b2ChainShape = Box2D.b2ChainShape;
 
-  //Having to type 'Box2D.' in front of everything makes porting
-  //existing C++ code a pain in the butt. This function can be used
-  //to make everything in the Box2D namespace available without
-  //needing to do that.
   var createPolygonShape = function (vertices) {
       var shape = new b2PolygonShape();
       var buffer = Box2D.allocate(vertices.length * 8, 'float', Box2D.ALLOC_STACK);
