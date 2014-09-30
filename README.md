@@ -14,3 +14,9 @@ Tools:
 
 Libs: 
  * Require.js
+ * lodash
+ * three.js
+ * box2d
+
+## Most recent project 
+ * Jump - combination of three.js and box2d
