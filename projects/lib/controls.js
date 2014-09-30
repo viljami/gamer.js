@@ -41,9 +41,11 @@ define([
     isDownFast: function(n){ return this.keys[n]; }
   };
 
-
-
   return {
+    UP: 38,
+    DOWN: 40,
+    LEFT: 37,
+    RIGHT: 39,
     init: function(){ keyboard.init(); },
     start: function(){ keyboard.startLinstening(); },
     stop: function(){ keyboard.stopListening(); },
