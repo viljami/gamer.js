@@ -5,7 +5,8 @@ require.config({
     onload: '../../lib/onload',
     Box2DHelpers: '../../lib/embox2d-helpers',
     Box2DDebugDraw: '../../lib/embox2d-debug-draw',
-    THREE: '../../vendor/three.min'
+    THREE: '../../vendor/three.min',
+    colladaLoader: '../../vendor/three/ColladaLoader'
   },
   shim: {
     underscore: {
@@ -16,6 +17,9 @@ require.config({
     },
     THREE: {
       exports: 'THREE'
+    },
+    colladaLoader: {
+      deps: ['THREE']
     }
   }
 });

@@ -34,11 +34,12 @@ define([
       b4.CreateFixture(shape, 1.0);
       b4.SetAngularDamping(10000);
       this.body = b4;
+      this.body.userData = { name: 'dude' };
 
       this.prevAngle = 0;
 
       var geometry = new THREE.BoxGeometry(0.5 * config.scaleX, 1 * config.scaleY, config.depth - 0.5);
-      this.threeObject = new THREE.Mesh(geometry, materials.blue);
+      this.threeObject = new THREE.Mesh(geometry, materials.cleanBox);
       this.options.scene.add(this.threeObject);
     };
 

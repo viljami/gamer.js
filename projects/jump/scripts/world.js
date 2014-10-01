@@ -6,9 +6,11 @@ define([
   'ground',
   'dude',
   'platform',
+  'star',
   'draw',
   'interaction',
-  'config'
+  'config',
+  'contact-listener'
 ], function(
   _,
   Box2D,
@@ -17,16 +19,18 @@ define([
   Ground,
   Dude,
   Platform,
+  Star,
   draw,
   interaction,
-  config
+  config,
+  ContactListener
 ){
   var options;
   var b2world;
   var scene, renderer, camera;
   var b2Vec2 = Box2D.b2Vec2;
   var currentTime, prevTime;
-  var dude, ground, light;
+  var dude, ground, light, star;
 
   return {
     init: function(){
@@ -48,6 +52,7 @@ define([
       camera = new Camera();
       ground = new Ground();
       dude = new Dude();
+      star = new Star();
 
       (new Platform()).init(_.extend(options, {x: 5, y: 2}));
       (new Platform()).init(_.extend(options, {x: -3, y: 4}));
@@ -58,11 +63,17 @@ define([
       camera.init(options);
       ground.init(options);
       dude.init(options);
+      // star.init(_.extend(options, {x: 0, y: 2}));
+      star.init(_.extend(options, {x: 3, y: 14}));
 
       interaction.init({b2world: b2world, dude: dude});
       interaction.start();
 
       prevTime = Date.now();
+
+      var contactListener = new ContactListener();
+      contactListener.init();
+      b2world.SetContactListener(contactListener.listener);
     },
 
     update: function(){

@@ -24,13 +24,14 @@ define([
       mvc.member.setDefaults.call(this, options);
 
       var shape = new b2EdgeShape();
-      shape.Set(new b2Vec2(-20.0, 0.0), new b2Vec2(20.0, 0.0));
+      shape.Set(new b2Vec2(-10.0, 0.0), new b2Vec2(10.0, 0.0));
       var ground = this.options.world.CreateBody(new b2BodyDef());
       ground.CreateFixture(shape, 0.0);
       this.body = ground;
+      this.body.userData = { name: 'ground' };
 
-      var geometry = new THREE.BoxGeometry(40, 0.5, config.depth);
-      this.threeObject = new THREE.Mesh(geometry, materials.green);
+      var geometry = new THREE.BoxGeometry(20, 0.5, config.depth);
+      this.threeObject = new THREE.Mesh(geometry, materials.woodBox);
       this.options.scene.add(this.threeObject);
 
       var p = this.body.GetPosition();

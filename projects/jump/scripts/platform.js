@@ -34,9 +34,10 @@ define([
       var b4 = this.options.world.CreateBody(bd);
       b4.CreateFixture(shape, 10.0);
       this.body = b4;
+      this.body.userData = { name: 'platform' };
 
       var geometry = new THREE.BoxGeometry(1 * config.scaleX, 0.5 * config.scaleY, config.depth - 0.2);
-      this.threeObject = new THREE.Mesh(geometry, materials.red);
+      this.threeObject = new THREE.Mesh(geometry, materials.woodBox);
       this.options.scene.add(this.threeObject);
       this.update();
     };
