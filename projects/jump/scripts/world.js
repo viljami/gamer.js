@@ -84,6 +84,17 @@ define([
       interaction.check();
 
       dude.update();
+      if (star && ! star.isDestroyed()) {
+        if (star.isAchieved()) {
+          this.starDust = star.starDust;
+          star.destroy();
+          this.isGameOver = true;
+        }
+
+        star.update();
+      } else {
+        this.starDust.update();
+      }
 
       // has dude fallen
       if (dude.body.GetPosition().get_y() <= -20){

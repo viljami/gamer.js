@@ -35,6 +35,16 @@ require([
   Box2D,
   getAnimaitionFrame
 ){
+  var h1;
+  var showGameOver = function(){
+    if (h1) return;
+
+    h1 = document.createElement('h1');
+    h1.innerText = 'Congrats, you are a box!';
+    h1.className = 'game-over';
+    document.body.appendChild(h1);
+  };
+
   onload(function(){
     document.body.innerHTML = '';
 
@@ -50,6 +60,9 @@ require([
 
     function update() {
       world.update();
+      if (world.isGameOver){
+        showGameOver();
+      }
     }
 
     function draw() {
