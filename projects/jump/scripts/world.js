@@ -89,11 +89,13 @@ define([
           this.starDust = star.starDust;
           star.destroy();
           this.isGameOver = true;
+          this.gameOverTime = Date.now();
         }
 
         star.update();
       } else {
-        this.starDust.update();
+        if (Date.now() - this.gameOverTime < 2000) this.starDust.update();
+        else this.starDust.destroy();
       }
 
       // has dude fallen
