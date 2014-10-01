@@ -20,7 +20,7 @@ canvas {
 
 button {
   position: fixed;
-  top: 10px;
+  top: 60px;
   left: 10px;
   width: 150px;
   height: 30px;
@@ -45,6 +45,20 @@ button:active {
   width: 260px;
   height: 30px;
   margin: -25px 0 0 -130px;
+  padding: 0;
   text-align: center;
   color: #fff;
+}
+
+.info {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 200px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  color: #fff;
+
 }

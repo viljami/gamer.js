@@ -51,11 +51,24 @@ require([
     world.init();
 
     var button = document.createElement('button');
-    button.innerText = 'Toggle debug';
+    button.innerText = 'Show core';
     document.body.appendChild(button);
-    button.addEventListener('click', function(e) {
-      e.preventDefault();
+
+    var info = document.createElement('p');
+    info.className = 'info';
+    info.innerText = 'Press the button to see what a programmer sees.';
+    document.body.appendChild(info);
+
+    button.addEventListener('click', function(){
       world.doDebugDraw = ! world.doDebugDraw;
+
+      if (world.doDebugDraw){
+        info.innerText = "Press the button to see with graphics.";
+        button.innerText = 'Show graphics';
+      } else {
+        info.innerText = 'Press the button to see what a programmer sees.';
+        button.innerText = 'Show core';
+      }
     });
 
     function update() {
