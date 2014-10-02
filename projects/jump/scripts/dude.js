@@ -50,6 +50,20 @@ define([
       this.threeObject.position.set(p.get_x(), p.get_y(), 1);
       this.threeObject.rotateZ(angleDif);
       this.prevAngle = currentAngle;
+      if (this.prevState === 'starred' && this.body.userData.starred) return;
+
+      if (this.prevState !== 'starred' && this.body.userData.starred) {
+        this.threeObject.material.materials[4] = materials.cleanBoxFaceD;
+        this.prevState = 'starred';
+      } else if (this.prevState !== 'jumping' && this.body.userData.jumping){
+        this.threeObject.material.materials[4] = materials.cleanBoxFaceO;
+        this.prevState = 'jumping';
+      } else if (this.prevState !== 'smile' &&
+          ! this.body.userData.jumping &&
+          ! this.body.userData.starred){
+        this.threeObject.material.materials[4] = materials.cleanBoxFace;
+        this.prevState = 'smile';
+      }
     };
 
     this.destroy = function() {

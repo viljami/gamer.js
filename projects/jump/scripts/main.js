@@ -40,9 +40,11 @@ require([
     if (h1) return;
 
     h1 = document.createElement('h1');
-    h1.innerText = 'Congrats, you are a box!';
+    h1.innerText = 'Congrats! You got a box.';
     h1.className = 'game-over';
     document.body.appendChild(h1);
+
+    setTimeout(function(){ h1.style.display ='none'; }, 15000);
   };
 
   onload(function(){
