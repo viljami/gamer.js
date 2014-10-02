@@ -53,12 +53,12 @@ require([
     world.init();
 
     var button = document.createElement('button');
-    button.innerText = 'Show core';
+    button.innerText = 'Show physics';
     document.body.appendChild(button);
 
     var info = document.createElement('p');
     info.className = 'info';
-    info.innerText = 'Press the button to see what a programmer sees.';
+    info.innerText = 'Press the button to see the game logic.';
     document.body.appendChild(info);
 
     button.addEventListener('click', function(){
@@ -66,10 +66,10 @@ require([
 
       if (world.doDebugDraw){
         info.innerText = "Press the button to see with graphics.";
-        button.innerText = 'Show graphics';
+        button.innerText = 'Show wrapping';
       } else {
-        info.innerText = 'Press the button to see what a programmer sees.';
-        button.innerText = 'Show core';
+        info.innerText = 'Press the button to see the game logic.';
+        button.innerText = 'Show physics';
       }
     });
 
