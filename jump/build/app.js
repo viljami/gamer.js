@@ -7393,7 +7393,7 @@ define('star',[
       this.starDust.init(starDustOptions);
 
       var loader = new THREE.ColladaLoader();
-      loader.load( '/jump/assets/star-with-material.dae', _.bind(function ( collada ){
+      loader.load( '/jump/assets/star-with-material.txt', _.bind(function ( collada ){
         var dae = collada.scene;
         // dae.rotation.x = -Math.PI/2;
         dae.updateMatrix();
