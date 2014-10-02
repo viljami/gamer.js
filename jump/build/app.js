@@ -8033,7 +8033,7 @@ require([
     if (h1) return;
 
     h1 = document.createElement('h1');
-    h1.innerText = 'Congrats! You got a box.';
+    h1.innerHTML = 'Congrats! You got a box.';
     h1.className = 'game-over';
     document.body.appendChild(h1);
 
@@ -8046,12 +8046,12 @@ require([
     world.init();
 
     var button = document.createElement('button');
-    button.innerText = 'Show physics';
+    button.innerHTML = 'Show physics';
     document.body.appendChild(button);
 
     var info = document.createElement('p');
     info.className = 'info';
-    info.innerText = 'Press the button to see the game logic.';
+    info.innerHTML = 'Press the button to see the game logic.';
     document.body.appendChild(info);
 
     button.addEventListener('click', function(){
