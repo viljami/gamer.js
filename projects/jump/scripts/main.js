@@ -48,7 +48,7 @@ require([
   };
 
   onload(function(){
-    document.body.innerHTML = '';
+    document.body.innerHTML = '<audio src="assets/musa.mp3" preload="auto" autoplay loop controls style="position:absolute;bottom:0;left:0;z-index:100;"></audio>';
 
     world.init();
 
